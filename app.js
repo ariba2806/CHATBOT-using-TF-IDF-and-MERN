@@ -4,7 +4,7 @@ const express=require('express');
 const bodyParser=require('body-parser');
 const app=express();
 //const mongoose=require('mongoose');
-const port=5000;
+const port = process.env.PORT || 5000;
   const sessionId = uuid.v4();
 app.use(bodyParser.urlencoded({
     extended:false
@@ -166,7 +166,7 @@ db.close();
 
 // display chat history from mongodb collection IT_chatbot
 app.get("/", function (req, res) {
-res.render("index",{ details: null })
+res.render("home",{ details: null })
 });
 app.get("/read",async(req,res)=>{
  var MongoClient = require('mongodb').MongoClient; 
