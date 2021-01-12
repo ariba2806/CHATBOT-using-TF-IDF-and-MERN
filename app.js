@@ -166,7 +166,7 @@ db.close();
 
 // display chat history from mongodb collection IT_chatbot
 app.get("/", function (req, res) {
-res.render("home",{ details: null })
+res.render("index",{ details: null })
 });
 app.get("/read",async(req,res)=>{
  var MongoClient = require('mongodb').MongoClient; 
